@@ -1,0 +1,22 @@
+Usage
+
+------------------------------
+
+NSDictionary *images = [[NSDictionary alloc] initWithObjectsAndKeys:
+                        @"segment_square_normal.png", @"backgroundImage",
+                        @"segment_square_selected.png", @"backgroundImageSelected",
+                        @"segment_round_normal.png", @"roundedImage",
+                        @"segment_round_selected.png", @"roundedImageSelected", nil];
+
+NSArray *items = [[NSArray alloc] initWithObjects: [NSDictionary dictionaryWithObjectsAndKeys:@"What", @"title", nil],
+                  [NSDictionary dictionaryWithObjectsAndKeys:@"The", @"title", nil], nil];
+
+CustomSegmentedControl *sc = [[CustomSegmentedControl alloc] initWithItems:items
+															   segmentSize:CGSizeMake(240/[items count], 31)
+															 segmentImages:images
+																  capWidth:4.0];
+[sc setTarget:self action:@selector(someAction:)];
+[images release];
+
+[self.navigationItem setTitleView:sc];
+[sc release];

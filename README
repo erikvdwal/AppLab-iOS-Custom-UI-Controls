@@ -1,0 +1,7 @@
+This package includes a few custom UI elements for iOS 4 (and above):
+
+- A custom progress bar
+- A image-based custom segmented control
+- A custom round-switch
+
+Found a bug or improvement? Send me a pull request so I can merge back your changes.
